@@ -6,11 +6,14 @@ const jumlahYasin = 41;
 
 tombolHitung.addEventListener("click", hitung);
 elemenInput.addEventListener("keyup", hitung);
+elemenInput.addEventListener("change", hitung);
 
 function hitung() {
     const jumlahPembaca = elemenInput.value;
     if (jumlahPembaca > 0) {
-        const pembacaKurangSatu = jumlahPembaca * Math.ceil(jumlahYasin / jumlahPembaca) - jumlahYasin;
+        const pembacaKurangSatu =
+            jumlahPembaca * Math.ceil(jumlahYasin / jumlahPembaca) -
+            jumlahYasin;
         const jumlahBacaanNormal = Math.ceil(jumlahYasin / jumlahPembaca);
         const jumlahPembacaNormal = jumlahPembaca - pembacaKurangSatu;
         const hasilHitungan = `${jumlahPembacaNormal} orang membaca ${jumlahBacaanNormal} kali,\n${pembacaKurangSatu} orang membaca ${
@@ -24,12 +27,13 @@ function hitung() {
             jumlahPembacaNormal * jumlahBacaanNormal +
             pembacaKurangSatu * (jumlahBacaanNormal - 1)
         }`;
-    
+
         console.log(hasilHitungan);
         console.log(detailHitungan);
-    
+
         elemenHasil.innerText = hasilHitungan;
     } else {
-        elemenHasil.innerText = "Maaf, jumlah pembaca tidak boleh kurang dari 1.";
+        elemenHasil.innerText =
+            "Maaf, jumlah pembaca tidak boleh kurang dari 1.";
     }
 }
