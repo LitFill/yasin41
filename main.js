@@ -16,17 +16,19 @@ function hitung() {
             jumlahYasin;
         const jumlahBacaanNormal = Math.ceil(jumlahYasin / jumlahPembaca);
         const jumlahPembacaNormal = jumlahPembaca - pembacaKurangSatu;
-        const hasilHitungan = `${jumlahPembacaNormal} orang membaca ${jumlahBacaanNormal} kali,\n${pembacaKurangSatu} orang membaca ${
-            jumlahBacaanNormal - 1
-        } kali.`;
-        const detailHitungan = `(${jumlahPembacaNormal} * ${jumlahBacaanNormal} + ${pembacaKurangSatu} * ${
-            jumlahBacaanNormal - 1
-        }) = (${jumlahPembacaNormal * jumlahBacaanNormal} + ${
-            pembacaKurangSatu * (jumlahBacaanNormal - 1)
-        }) = ${
-            jumlahPembacaNormal * jumlahBacaanNormal +
-            pembacaKurangSatu * (jumlahBacaanNormal - 1)
-        }`;
+        const hasilHitungan =
+            `${jumlahPembacaNormal} orang membaca ${jumlahBacaanNormal} kali,\n${pembacaKurangSatu} orang membaca ${
+                jumlahBacaanNormal - 1
+            } kali.`;
+        const detailHitungan =
+            `(${jumlahPembacaNormal} * ${jumlahBacaanNormal} + ${pembacaKurangSatu} * ${
+                jumlahBacaanNormal - 1
+            }) = (${jumlahPembacaNormal * jumlahBacaanNormal} + ${
+                pembacaKurangSatu * (jumlahBacaanNormal - 1)
+            }) = ${
+                jumlahPembacaNormal * jumlahBacaanNormal +
+                pembacaKurangSatu * (jumlahBacaanNormal - 1)
+            }`;
 
         console.log(hasilHitungan);
         console.log(detailHitungan);
